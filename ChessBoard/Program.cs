@@ -2,8 +2,9 @@
 using System.Data;
 using System.Security.AccessControl;
 
+Console.OutputEncoding = System.Text.Encoding.Unicode;
 
-	Console.WriteLine("Ange storlek på brädet genom att skriva ett tal mellan 3-50");
+Console.WriteLine("Ange storlek på brädet genom att skriva ett tal mellan 3-50");
 	String input = Console.ReadLine();
 
 	int.TryParse(input, out int storlek);
@@ -19,11 +20,11 @@ if (storlek >= 3 && storlek <= 50)
         {
             if ((rad + kolumn) % 2 == 0)
             {
-                Console.Write("X");
+                Console.Write("  ");
             }
             else
             {
-                Console.Write("O");
+                Console.Write("\u2588\u2588 ");
             }
             
         }
