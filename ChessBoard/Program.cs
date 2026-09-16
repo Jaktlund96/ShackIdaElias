@@ -20,11 +20,11 @@ if (storlek >= 3 && storlek <= 50)
         {
             if ((rad + kolumn) % 2 == 0)
             {
-                Console.Write("  ");
+                Console.Write("\u25a1 ");
             }
             else
             {
-                Console.Write("\u2588\u2588 ");
+                Console.Write("\u25a0 ");
             }
             
         }
