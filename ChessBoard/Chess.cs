@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
+using Spectre.Console;
+
 namespace ChessBoard
 {
     class Chess
@@ -17,7 +19,12 @@ namespace ChessBoard
         {
             while (true)
             {
-                Console.WriteLine("Ange storlek på brädet genom att skriva ett tal mellan 3-50");
+
+                var background = new Text("Vänligen ange ett nummer mellan 3-50!", new Style(background: Color.Blue));
+                AnsiConsole.Write(background);
+                AnsiConsole.WriteLine();
+
+
                 String input = Console.ReadLine();
                 if (int.TryParse(input, out int size) && size >= 3 && size <= 50)
                 {
@@ -31,8 +38,7 @@ namespace ChessBoard
 
         public void RenderBoard() //Metod 2
         {
-
-            
+           
                 
                 for (int rad = 0; rad < Size; rad++)
                 {

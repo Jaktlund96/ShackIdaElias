@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Security.AccessControl;
+using Spectre.Console;
 
 namespace ChessBoard
 { 
@@ -8,6 +9,8 @@ namespace ChessBoard
     {
         static void Main()
         {
+            
+
             int size = Chess.ReadSize();
 
             Chess board = new Chess(size);
