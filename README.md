@@ -1,48 +1,43 @@
-# ShackIdaElias
-k1 Projektinlämning
+**ShackIdaElias**
+
+**K1 Project Submission**
 
 ♟️ **ChessBoard**
 
-Ett konsolbaserat schackbräde byggt i C# och .NET. 
-Programmet låter användaren välja storleken på schackbrädet och 
-skriver sedan ut brädet i konsolen.
+A console-based chessboard built in C# and .NET.
 
-🚨**Krav**
+The program allows the user to choose the size of the chessboard and then prints the board in the console.
 
-- .NET 10
-- Git
+🚨 **Requirements**
 
-🔧**Klona, bygga och köra**
+.NET 10
 
-Klona projektet:
+Git
 
-git clone <https://github.com/Jaktlund96/ShackIdaElias.git>
 
-Gå till projektmappen:
+🔧 **Clone, Build and Run**
 
-cd <cd ChessBoard>
+Clone the project: git clone https://github.com/Jaktlund96/ShackIdaElias.git
 
-Bygg projektet:
+Go to the project directory: cd ChessBoard
 
-dotnet build
+Build the project: dotnet build
 
-Kör programmet:
+Run the program: dotnet run
 
-dotnet run
+🎮 **Usage**
 
-🎮**Användning**
+When the program starts, the user is asked to enter the size of the chessboard.
 
-När programmet startar får användaren ange storleken på schackbrädet.
+The size must be between 3 and 50.
 
-Storleken måste vara mellan 3 och 50.
+Example:
 
-Exempel:
-
-Ange storlek på brädet genom att skriva ett tal mellan 3-50:
+Enter the board size by typing a number between 3–50:
 
 8
 
-Det resulterar i ett schackbräde med 8 × 8 rutor:
+This results in an 8 × 8 chessboard:
 ```
 □ ■ □ ■ □ ■ □ ■
 ■ □ ■ □ ■ □ ■ □
@@ -53,41 +48,40 @@ Det resulterar i ett schackbräde med 8 × 8 rutor:
 □ ■ □ ■ □ ■ □ ■
 ■ □ ■ □ ■ □ ■ □
 ```
+📦 **NuGet Package**
 
-📦**NuGet-paket**
 Spectre.Console
 
-Projektet använder paketet Spectre.Console. Det valdes för att skapa ett mer visuellt tilltalande spel.
-Vi valde att färga första textradens bakgrund blå, detta var för att det skulle hända något direkt när spelet öppnades.
-Vi valde inte att göra detta på fler textrader då vi ansåg att det skulle se för klumpigt ut och inte snyggt.
+The project uses the Spectre.Console package. It was chosen to create a more visually appealing game.
 
-🏗**Kodstruktur**
+We chose to make the background of the first line of text blue so that something would happen visually as soon as the game was opened.
 
-Klassen Chess representerar schackbrädet och innehåller bland annat:
+We chose not to do this for additional lines of text because we felt that it would look too cluttered and less visually appealing.
 
-Size – anger storleken på schackbrädet.
-ReadSize() – läser in och validerar användarens input.
-RenderBoard() – skapar och skriver ut schackbrädet i konsolen.
+🏗 **Code Structure**
 
-🔀**Git-arbete**
+The Chess class represents the chessboard and contains, among other things:
 
-Projektet versionshanterades med Git. Vi gjorde commits löpande
-under utvecklingen för att spara olika förändringar.
+Size – specifies the size of the chessboard.
+ReadSize() – reads and validates the user's input.
+RenderBoard() – creates and prints the chessboard in the console.
 
-Mergeconflict uppstod under arbetets gång när en av utvecklarna av misstag sparade en ändring som han gjort lokalt på sin dator. 
-Detta rättades till genom att klicka på "pending changes" i Visual studios där ändringen syntes och klicka på "undo"
-Det uppstod även en till mergeconflikt i slutet av projektet. Medan person A jobbade med att installera NuGet-paketet och lägga till relevant kod så redigerade person B i ReadMe filen.
-Detta resulterade i felmeddelande när person A skulle köra git push då hen inte hade den uppdaterade versionen. Detta löstes genom att köra git pull innan git push.
+🔀 **Git Workflow**
 
-⚙**Tekniska val**
+The project was version controlled using Git. We made commits continuously throughout the development process to save different changes.
 
-Användarens input valideras med int.TryParse() för att säkerställa att
-det användaren skriver går att omvandla till ett heltal. Storleken
-kontrolleras även så att den ligger mellan 3 och 50.
+A merge conflict occurred during the development process when one of the developers accidentally saved a local change on their computer.
 
-För att växla mellan svarta och vita rutor används radens och kolumnens
-position. Genom att kontrollera (rad + kolumn) % 2 kan programmet
-avgöra vilken typ av ruta som ska skrivas ut.
+This was resolved by clicking "Pending Changes" in Visual Studio, where the change was visible, and then clicking "Undo".
 
-Koden är uppdelad i en klass och flera metoder för att göra programmet
-tydligare och separera olika ansvarsområden.
+Another merge conflict occurred towards the end of the project. While Person A was installing the NuGet package and adding the relevant code, Person B was editing the README file.
+
+This resulted in an error message when Person A tried to run git push, because they did not have the latest version of the project. This was resolved by running git pull before git push.
+
+⚙ **Technical Choices**
+
+The user's input is validated using int.TryParse() to ensure that the input can be converted into an integer. The size is also checked to make sure that it is between 3 and 50.
+
+The row and column positions are used to alternate between black and white squares. By checking (row + column) % 2, the program can determine which type of square should be printed.
+
+The code is divided into a class and several methods to make the program clearer and to separate different responsibilities.
