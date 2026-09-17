@@ -57,9 +57,9 @@ Det resulterar i ett schackbräde med 8 × 8 rutor:
 📦**NuGet-paket**
 Spectre.Console
 
-Projektet använder Spectre.Console för att 
-
-Paketet valdes för att 
+Projektet använder paketet Spectre.Console. Det valdes för att skapa ett mer visuellt tilltalande spel.
+Vi valde att färga första textradens bakgrund blå, detta var för att det skulle hända något direkt när spelet öppnades.
+Vi valde inte att göra detta på fler textrader då vi ansåg att det skulle se för klumpigt ut och inte snyggt.
 
 🏗**Kodstruktur**
 
