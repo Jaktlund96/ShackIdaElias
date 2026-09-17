@@ -76,6 +76,8 @@ under utvecklingen för att spara olika förändringar.
 
 Mergeconflict uppstod under arbetets gång när en av utvecklarna av misstag sparade en ändring som han gjort lokalt på sin dator. 
 Detta rättades till genom att klicka på "pending changes" i Visual studios där ändringen syntes och klicka på "undo"
+Det uppstod även en till mergeconflikt i slutet av projektet. Medan person A jobbade med att installera NuGet-paketet och lägga till relevant kod så redigerade person B i ReadMe filen.
+Detta resulterade i felmeddelande när person A skulle köra git push då hen inte hade den uppdaterade versionen. Detta löstes genom att köra git pull innan git push.
 
 ⚙**Tekniska val**
 
