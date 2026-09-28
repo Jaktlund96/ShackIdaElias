@@ -14,9 +14,10 @@ namespace ChessBoard
       {
             Size = size;
       }
-
+        
         public static int ReadSize() //Metod 1. Läser in storleken och skriver ut storleken
         {
+            
             while (true)
             {
 
@@ -30,10 +31,14 @@ namespace ChessBoard
                 {
                     Console.WriteLine("Godkänt storlek!");
                     return size;
+                    
                 }
-
-                Console.WriteLine("Felaktig storlek, skriv ett tal mellan 3-50.");
+                else
+                {
+                    Console.WriteLine("Felaktig inmatning, skriv ett tal mellan 3-50.");
+                }
             }
+            
         }
 
         public void RenderBoard() //Metod 2
@@ -46,11 +51,11 @@ namespace ChessBoard
                     {
                         if ((row + column) % 2 == 0)
                         {
-                            Console.Write("\u25a1 ");
+                            Console.Write("\u25a1 ");       //Unicode tecken för vit ruta.
                         }
                         else
                         {
-                            Console.Write("\u25a0 ");
+                            Console.Write("\u25a0 ");       //Unicode tecken för svart ruta.
                         }
 
                     }
