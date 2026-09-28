@@ -40,11 +40,11 @@ namespace ChessBoard
         {
            
                 
-                for (int rad = 0; rad < Size; rad++)
+                for (int row = 0; row < Size; row++)
                 {
-                    for (int kolumn = 0; kolumn < Size; kolumn++)
+                    for (int column = 0; column < Size; column++)
                     {
-                        if ((rad + kolumn) % 2 == 0)
+                        if ((row + column) % 2 == 0)
                         {
                             Console.Write("\u25a1 ");
                         }
